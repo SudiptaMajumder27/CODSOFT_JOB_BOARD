@@ -1,0 +1,6 @@
+head,body{
+    background-color: skyblue;
+    height: '103vh';
+     width: 'auto';
+     background-image: url("./background.jpg");
+}
