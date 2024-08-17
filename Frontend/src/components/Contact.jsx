@@ -17,7 +17,7 @@ function Contact() {
         };
 
         try {
-            const res = await axios.post("http://localhost:5001/user/contact", contInfo);
+            const res = await axios.post("https://job-board-backend-vnpt.onrender.com/user/contact", contInfo);
             if (res.data) {
               toast.success("Job post created successfully");
               
