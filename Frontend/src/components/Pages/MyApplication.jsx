@@ -186,7 +186,7 @@ function MyApplication() {
 
   useEffect(() => {
     if (email) {
-      axios.get(`http://localhost:5001/myapplications?email=${email}`)
+      axios.get(`https://job-board-backend-vnpt.onrender.com/myapplications?email=${email}`)
         .then(response => {
           setApplications(response.data);
         })
