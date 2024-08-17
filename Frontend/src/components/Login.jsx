@@ -25,7 +25,7 @@ function Login() {
         };
         // eslint-disable-next-line no-undef
        await axios
-       .post("http://localhost:5001/user/login", userInfo)
+       .post("https://job-board-backend-vnpt.onrender.com/user/login", userInfo)
         .then((res)=>{
             console.log(res.data);
             if(res.data){
