@@ -25,13 +25,8 @@ const PORT = process.env.PORT || 5000;
 const URI = process.env.ATLASDB_URL;
 
 // Connect to MongoDB
-mongoose.connect(URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(error => console.error('Error connecting to MongoDB:', error));
-
+mongoose.connect(URI);
+ 
 // Define routes
 app.use('/codsoft', codsoftRoute);
 app.use('/user', userRoute);
