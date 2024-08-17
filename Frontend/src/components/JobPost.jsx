@@ -27,7 +27,7 @@ function JobPost() {
     };
 
     try {
-      const res = await axios.post("http://localhost:5001/user/jobpost", jobInfo);
+      const res = await axios.post("https://job-board-backend-vnpt.onrender.com/user/jobpost", jobInfo);
       console.log(res);
       if (res.data) {
         toast.success("Job post created successfully");
