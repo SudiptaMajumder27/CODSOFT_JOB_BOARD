@@ -1,0 +1,37 @@
+{
+  "name": "codsoft",
+  "version": "1.0.0",
+  "description": "mern project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudiptaMajumder27/CODSOFT.git"
+  },
+  "author": "Sudipta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SudiptaMajumder27/CODSOFT/issues"
+  },
+  "homepage": "https://github.com/SudiptaMajumder27/CODSOFT#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "codsoft": "file:",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.5.3",
+    "mongosh": "^2.2.15",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
+    "path": "^0.12.7",
+    "pkill": "^2.0.0"
+  },
+  "keywords": []
+}
