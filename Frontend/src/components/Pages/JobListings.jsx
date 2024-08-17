@@ -15,7 +15,7 @@ function JobListings() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5001/getjobposts')
+      .get('https://job-board-backend-vnpt.onrender.com/getjobposts')
       .then((response) => setJobPosts(response.data))
       .catch((err) => console.log(err));
   }, []);
