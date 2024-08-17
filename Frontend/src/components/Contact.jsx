@@ -1,21 +1,44 @@
 /* eslint-disable no-unused-vars */
 import React from "react"
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form"
-
+import toast from 'react-hot-toast';
+import axios from 'axios';
 function Contact() {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => console.log(data);
-    
+    const navigate = useNavigate();
+  const { register, handleSubmit, formState: { errors } } = useForm();
+   
+      const onSubmit = async(data) => {
+        const contInfo = {
+            name : data.name,
+            email: data.email,
+            description: data.description
+        };
+
+        try {
+            const res = await axios.post("http://localhost:5001/user/contact", contInfo);
+            if (res.data) {
+              toast.success("Job post created successfully");
+              
+              setTimeout(() => {
+                window.location.reload();
+                localStorage.setItem("User", JSON.stringify(res.data.user));
+              }, 1000);
+            }
+          } catch (err) {
+            if (err.response) {
+              toast.error("Error! " + err.response.data.message);
+            }
+          }
+
+
+      };
+        
   return (
    <>
    <div className="flex h-screen items-center justify-center  ">
-   <div id=" " className="  rounded-md " >
+   <div className="  rounded-md " >
         <div className="modal-box w-auto">
             <form onSubmit={handleSubmit(onSubmit)}  method="dialog ">
                {/* if there is a button in form, it will close the modal */}
@@ -40,17 +63,7 @@ function Contact() {
                  <br/>
                  {errors.email && <span className="text-sm text-red-500">This field is required</span>}
             </div>
-           {/* password */}
-
-           <div className="mt-4 space-y-2">
-                <span>Password</span><br/>
-                <input type="password" placeholder="Enter your password"  className="w-80 px-3 py-1 border rounded-md outline-none"
-                {...register("password", { required: true })}
-                />
-                 <br/>
-                 {errors.password && <span className="text-sm text-red-500">This field is required</span>}
-            </div>
-
+           
             {/* Description */}
             <div className="mt-4 space-y-2">
                 <span>Description</span>

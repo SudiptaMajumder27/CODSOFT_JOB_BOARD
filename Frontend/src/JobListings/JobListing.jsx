@@ -9,8 +9,6 @@ function JobListing() {
    
   return (<>
   <Navbar/>
-
-
   <div className="min-h-screen">
   <JobListings/>
   </div>
