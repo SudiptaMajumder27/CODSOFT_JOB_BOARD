@@ -13,7 +13,7 @@ function JobDetails() {
   useEffect(() => {
     const fetchJobDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/getjobposts/${id}`);
+        const response = await axios.get(`https://job-board-backend-vnpt.onrender.com/getjobposts/${id}`);
         setJobDetails(response.data);
         setLoading(false);
       } catch (err) {
