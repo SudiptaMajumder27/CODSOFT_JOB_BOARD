@@ -19,7 +19,7 @@ function Contact() {
         try {
             const res = await axios.post("https://job-board-backend-vnpt.onrender.com/user/contact", contInfo);
             if (res.data) {
-              toast.success("Job post created successfully");
+              toast.success("Your message was submitted successfully! Check your email!");
               
               setTimeout(() => {
                 window.location.reload();
