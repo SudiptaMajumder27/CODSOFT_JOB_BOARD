@@ -7,10 +7,14 @@
 The Job Board Website is an intuitive platform designed for both job seekers and employers. Candidates can apply for job listings posted by companies, and both parties can communicate directly with the Job Board team. Each action triggers a convenient email notification, ensuring timely communication.
 
 # ✨ Features
-📝 Job Posting: Companies can create and manage job posts.
+📝 Job Posting:   Companies can create and manage job posts.
+
 📄 Job Applications: Candidates can browse listings and apply with their resumes.
+
 📧 Email Notifications: Automatic emails for job application confirmations, job postings, and inquiries.
+
 📞 Contact Job Board: Both companies and candidates can reach out to the team anytime.
+
 # 🛠 Tech Stack
 Frontend:  React.js
 
