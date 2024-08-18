@@ -1,4 +1,4 @@
-[# Job Board
+# Job Board
 
 # React + Vite
 
@@ -28,7 +28,7 @@ Email Service : Nodemailer
 # Clone the repository:
 
 
-git clone https://github.com/yourusername/job-board.git
+git clone (https://github.com/SudiptaMajumder27/CODSOFT_JOB_BOARD.git)
 # Install dependencies:
 
 # For backend:
@@ -58,14 +58,12 @@ EMAIL_PASS=<your-email-password>
 
 # Backend:
 
-
 npm start
 
 # Frontend:
 
-
-
 npm run dev
+
 # 📚 Usage
 # Employers:
 
