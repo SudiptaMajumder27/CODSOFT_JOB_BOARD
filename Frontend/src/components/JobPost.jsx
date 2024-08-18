@@ -30,7 +30,7 @@ function JobPost() {
       const res = await axios.post("https://job-board-backend-vnpt.onrender.com/user/jobpost", jobInfo);
       console.log(res);
       if (res.data) {
-        toast.success("Job post created successfully");
+        toast.success("Job post created successfully! Check your email!");
         document.getElementById("my_modal_3").close();
         setTimeout(() => {
           window.location.reload();
