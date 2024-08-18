@@ -88,7 +88,7 @@ export const jobpost = async (req, res) => {
         const mailOptions = {
             from: process.env.SMPT_MAIL, // Your Gmail address
             to: email, // User's email address
-            subject: 'Job posted Successfully! Check your email!',
+            subject: 'Job posted Successfully!',
             text: `Hello ${company_name},\n\nYour post for ${title} has been submitted successfully.\n\nBest regards,\nJob Board Team`,
           };
 
@@ -161,7 +161,7 @@ export const apply = async (req, res) => {
         const mailOptions = {
             from: process.env.SMPT_MAIL, // Your Gmail address
             to: email, // User's email address
-            subject: 'Application Submitted Successfully! Check your email!',
+            subject: 'Application Submitted Successfully!',
             text: `Hello ${fullname},\n\nYour application for ${company_title} has been submitted successfully.\n\nBest regards,\nJob Portal Team`,
           };
 
@@ -210,7 +210,7 @@ export const contact = async (req, res) =>{
         const mailOptions = {
             from: process.env.SMPT_MAIL, // Your Gmail address
             to: email, // User's email address
-            subject: 'Your message was submitted successfully! Check your email!',
+            subject: 'Your message was submitted successfully!',
             text: `Hello ${name},\n\nYour message  "${description}" has been submitted successfully.\n\nBest regards,\nJob Board Team`,
           };
 
