@@ -1,4 +1,5 @@
 # Job Board
+Website Url: (https://codsoft-job-board-frontend.onrender.com/)
 
 # React + Vite
 
@@ -31,14 +32,14 @@ Email Service : Nodemailer
 git clone (https://github.com/SudiptaMajumder27/CODSOFT_JOB_BOARD.git)
 # Install dependencies:
 
-# For backend:
+ For backend:
 
 
 cd Backend
 
 npm install
 
-# For frontend:
+ For frontend:
 
 
 cd Frontend
@@ -56,11 +57,11 @@ EMAIL_PASS=<your-email-password>
 
 # Run the project:
 
-# Backend:
+ Backend:
 
 npm start
 
-# Frontend:
+ Frontend:
 
 npm run dev
 
