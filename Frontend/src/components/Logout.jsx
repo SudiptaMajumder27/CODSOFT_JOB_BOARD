@@ -12,7 +12,7 @@ function Logout() {
                   user : null,
             });
              localStorage.removeItem("Users");
-             toast.success("Logout successfullt");
+             toast.success("Logout successfull");
              
              setTimeout(() =>{ 
                window.location.reload();
