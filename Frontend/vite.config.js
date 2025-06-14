@@ -8,13 +8,14 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default defineConfig({
+  base: '/', // ✅ This is essential for client-side routing to work correctly
   plugins: [
     react(),
     viteStaticCopy({
       targets: [
         {
-          src: 'public/_redirects', // ✅ correct path
-          dest: '.'  // this copies to `dist/`
+          src: 'public/_redirects', // for Netlify (optional)
+          dest: '.'
         }
       ]
     })

@@ -13,7 +13,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
  <App />
  </div>
  </JobPost>
- 
  </BrowserRouter>
     
  

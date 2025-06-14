@@ -14,9 +14,6 @@ import MyApplications from "./MyApplications/MyApplication";
 import Contact from "./components/Contact";
 // import MyApplication from "./components/Pages/MyApplication";
 
-
-
-
 function App() {
   const [authUser, setAuthUser] =  useAuth()
   console.log(authUser);
