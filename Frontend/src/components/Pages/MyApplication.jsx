@@ -3,11 +3,14 @@ import axios from 'axios';
 
 function MyApplication() {
   const [applications, setApplications] = useState([]);
-  const [email, setEmail] = useState(''); // Input for user email
+  const [email, setEmail] = useState('');
+
+ const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     if (email) {
-      axios.get(`https://codsoft-job-board-1-uzdp.onrender.com/myapplications?email=${email}`)
+      axios
+        .get(`${API_URL}/myapplications?email=${email}`)
         .then(response => {
           setApplications(response.data);
         })
@@ -58,11 +61,11 @@ function MyApplication() {
                 <strong>Email:</strong> {application.email}
               </p>
               <p className="text-gray-600 mt-2">
-                <strong>Resume Link:</strong> 
-                <a 
-                  href={`http://localhost:5001/user/resumes/${application.resumeFile}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <strong>Resume Link:</strong>{' '}
+                <a
+                  href={`${API_URL}/user/resumes/${application.resumeFile}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-500"
                 >
                   View Resume

@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-// /* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 function JobApplys() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -18,7 +19,7 @@ function JobApplys() {
     formData.append('resumeFile', data.resumeFile[0]); // File input
 
     try {
-      const res = await axios.post("https://codsoft-job-board-1-uzdp.onrender.com/user/apply", formData, {
+      const res = await axios.post(`${API_URL}/user/apply`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       if (res.data) {
@@ -69,11 +70,11 @@ function JobApplys() {
             <div className="mt-4">
               <span>Upload Resume</span>
               <input
-                 type="file"
-                 accept=".pdf,.doc,.docx"
-                 className="w-80 px-3 py-1 border rounded-md"
-                   {...register("resumeFile", { required: true })}
-               />
+                type="file"
+                accept=".pdf,.doc,.docx"
+                className="w-80 px-3 py-1 border rounded-md"
+                {...register("resumeFile", { required: true })}
+              />
               {errors.resumeFile && <span className="text-sm text-red-500">This field is required</span>}
             </div>
 
@@ -96,5 +97,3 @@ function JobApplys() {
 }
 
 export default JobApplys;
-
-
