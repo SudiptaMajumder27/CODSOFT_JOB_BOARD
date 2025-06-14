@@ -15,7 +15,7 @@ function JobListings() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5001/getjobposts')
+      .get('https://codsoft-job-board-1-uzdp.onrender.com/getjobposts')
       .then((response) => setJobPosts(response.data))
       .catch((err) => console.log(err));
   }, []);

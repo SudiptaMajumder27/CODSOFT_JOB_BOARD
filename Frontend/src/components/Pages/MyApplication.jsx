@@ -7,7 +7,7 @@ function MyApplication() {
 
   useEffect(() => {
     if (email) {
-      axios.get(`http://localhost:5001/myapplications?email=${email}`)
+      axios.get(`https://codsoft-job-board-1-uzdp.onrender.com/myapplications?email=${email}`)
         .then(response => {
           setApplications(response.data);
         })

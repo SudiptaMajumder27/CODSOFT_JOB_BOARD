@@ -11,37 +11,39 @@ function Signup() {
   const navigate = useNavigate();
   const from = location.state?.pathname || "/";
 
+  
+  const API = import.meta.env.VITE_API_URL;
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const onSubmit = async (data) => {
     const userInfo = {
       fullname: data.fullname,
       email: data.email,
       password: data.password,
     };
-     // eslint-disable-next-line no-undef
-       await axios
-       .post("http://localhost:5001/user/signup", userInfo)
-        .then((res)=>{
-            console.log(res.data);
-            if(res.data){
-                toast.success("Signup successfull");
-                navigate(from , {replace:true});
-            }
-            localStorage.setItem("Users", JSON.stringify(res.data.user));
-        })
-        .catch((err)=>{
-            if(err.response){
-                console.log(err);
-                toast.error("Error! " + err.response.data.message);
-            }
-           
-        });
 
-      };
+    try {
+      const res = await axios.post(`${API}/user/signup`, userInfo);
+
+      if (res.data) {
+        toast.success("Signup successful");
+        localStorage.setItem("Users", JSON.stringify(res.data.user));
+        navigate(from, { replace: true });
+      }
+    } catch (err) {
+      if (err.response) {
+        toast.error("Error! " + err.response.data.message);
+      } else {
+        toast.error("Something went wrong");
+      }
+      console.error(err);
+    }
+  };
 
   return (
     <div className="flex h-screen items-center justify-center bg-gray-100">
@@ -64,7 +66,9 @@ function Signup() {
               {...register("fullname", { required: "Name is required" })}
             />
             {errors.fullname && (
-              <span className="text-sm text-red-500">{errors.fullname.message}</span>
+              <span className="text-sm text-red-500">
+                {errors.fullname.message}
+              </span>
             )}
           </div>
 
@@ -77,7 +81,9 @@ function Signup() {
               {...register("email", { required: "Email is required" })}
             />
             {errors.email && (
-              <span className="text-sm text-red-500">{errors.email.message}</span>
+              <span className="text-sm text-red-500">
+                {errors.email.message}
+              </span>
             )}
           </div>
 
@@ -90,7 +96,9 @@ function Signup() {
               {...register("password", { required: "Password is required" })}
             />
             {errors.password && (
-              <span className="text-sm text-red-500">{errors.password.message}</span>
+              <span className="text-sm text-red-500">
+                {errors.password.message}
+              </span>
             )}
           </div>
 

@@ -18,7 +18,7 @@ function JobApplys() {
     formData.append('resumeFile', data.resumeFile[0]); // File input
 
     try {
-      const res = await axios.post("http://localhost:5001/user/apply", formData, {
+      const res = await axios.post("https://codsoft-job-board-1-uzdp.onrender.com/user/apply", formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       if (res.data) {
