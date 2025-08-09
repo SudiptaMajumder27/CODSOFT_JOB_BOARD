@@ -48,5 +48,46 @@ Built using **React.js**, **Node.js**, **Express.js**, and **MongoDB**, with **e
 
 CODSOFT_JOB_BOARD/
 │── Backend/ # Express.js + MongoDB API
+
 │── Frontend/ # React.js UI
+
 │── README.md
+
+
+
+2️⃣ Backend Setup
+bash
+Copy
+Edit
+cd Backend
+npm install
+npm start
+
+
+3️⃣ Frontend Setup
+bash
+Copy
+Edit
+cd Frontend
+npm install
+npm run dev
+
+
+
+4️⃣ Environment Variables
+Create a .env file in Backend folder:
+
+ini
+Copy
+Edit
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password
+
+
+
+📜 License
+This project is licensed under the MIT License.
+
+
