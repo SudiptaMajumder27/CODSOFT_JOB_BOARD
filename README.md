@@ -44,3 +44,9 @@ Built using **React.js**, **Node.js**, **Express.js**, and **MongoDB**, with **e
 ---
 
 ## 📂 Project Structure
+
+
+CODSOFT_JOB_BOARD/
+│── Backend/ # Express.js + MongoDB API
+│── Frontend/ # React.js UI
+│── README.md
