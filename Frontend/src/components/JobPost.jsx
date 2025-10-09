@@ -27,7 +27,7 @@ function JobPost() {
     try {
       const res = await axios.post(`${API}/user/jobpost`, jobInfo);
       if (res.data) {
-        toast.success("Job post created successfully");
+        toast.success("Job post created successfully! Check your email!");
         document.getElementById("my_modal_3").close();
         setTimeout(() => {
           window.location.reload();
