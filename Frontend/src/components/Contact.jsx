@@ -19,7 +19,6 @@ function Contact() {
       description: data.description
     };
 
-<<<<<<< HEAD
     try {
       const res = await axios.post(`${API_URL}/user/contact`, contInfo);
       if (res.data) {
@@ -36,27 +35,6 @@ function Contact() {
     }
   };
 
-=======
-        try {
-            const res = await axios.post("http://localhost:5001/user/contact", contInfo);
-            if (res.data) {
-              toast.success("Job post created successfully");
-              
-              setTimeout(() => {
-                window.location.reload();
-                localStorage.setItem("User", JSON.stringify(res.data.user));
-              }, 1000);
-            }
-          } catch (err) {
-            if (err.response) {
-              toast.error("Error! " + err.response.data.message);
-            }
-          }
-
-
-      };
-        
->>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505
   return (
     <>
       <div className="flex h-screen items-center justify-center">
