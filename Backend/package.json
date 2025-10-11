@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SudiptaMajumder27/CODSOFT.git"
+    "url": "git+https://github.com/SudiptaMajumder27/CODSOFT_JOB_BOARD.git"
   },
   "author": "Sudipta",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SudiptaMajumder27/CODSOFT/issues"
+    "url": "https://github.com/SudiptaMajumder27/CODSOFT_JOB_BOARD.git/issues"
   },
-  "homepage": "https://github.com/SudiptaMajumder27/CODSOFT#readme",
+  "homepage": "https://github.com/SudiptaMajumder27/CODSOFT_JOB_BOARD.git#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "codsoft": "file:",
@@ -28,7 +28,7 @@
     "fs": "^0.0.1-security",
     "mongoose": "^8.5.3",
     "mongosh": "^2.2.15",
-    "multer": "^1.4.7",
+    "multer": "^1.4.4",
     "nodemailer": "^6.9.14",
     "nodemon": "^3.1.4",
     "path": "^0.12.7",
