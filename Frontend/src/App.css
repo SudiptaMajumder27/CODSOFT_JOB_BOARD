@@ -1,6 +1,13 @@
 head,body{
+<<<<<<< HEAD
    
     height: '103vh';
      width: 'auto';
      background-image: url("./background.jpg");
+=======
+    background-color: skyblue;
+    height: '103vh';
+     width: 'auto';
+     /* background-image: url("./background.jpg"); */
+>>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505
 }

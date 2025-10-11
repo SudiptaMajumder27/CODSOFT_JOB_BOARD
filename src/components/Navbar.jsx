@@ -42,11 +42,7 @@ function Navbar() {
   }, []);
     return (
     <>
-<<<<<<< HEAD
-<div className={` max-w-screen-3xl fixed top-0 left-0 right-0 z-50 dark:bg-slate-900 dark:text-white fixed ${
-=======
 <div className={` max-w-screen-3xl fixed top-0 left-0 right-1 z-50 dark:bg-slate-900 dark:text-white fixed ${
->>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505
   sticky?"sticky-navbar shadow-md bg-base-200 dark:bg-slate-600 dark:text-white duration-300 transition-all ease-in-out":""
 }`}>
 <div className="navbar">
@@ -78,12 +74,7 @@ function Navbar() {
     </ul>
     </div>
     </div>
-<<<<<<< HEAD
-  <a className=" tilie text-2xl ml-6 font-bold cursor-pointer flex items-center dark:bg-slate-900 dark:text-white">
-  JOB LANDER</a>
-=======
   <a className=" tilie text-2xl ml-6 font-bold cursor-pointer flex items-center dark:bg-slate-900 dark:text-white">Job Board</a>
->>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505
   
   </div>
 <div className="navbar-end space-x-2">
@@ -148,18 +139,10 @@ function Navbar() {
   </div>
  </div>
  </div>
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505
     </>
   )
  }
 
 
-<<<<<<< HEAD
 export default Navbar
-=======
-export default Navbar
->>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505

@@ -28,12 +28,9 @@ function FrontPage() {
       </div>
 
     </div>
-<<<<<<< HEAD
-=======
     
 
     {/* className=" down h-1/2  max-w-screen-2xl container mx auto md:px-20 px-4 flex flex-col md:flex-row md:ml-0 dark:bg-slate-900 dark:text-white" */}
->>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505
   </div>
   </>
    
