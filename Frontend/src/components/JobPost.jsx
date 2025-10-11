@@ -27,11 +27,7 @@ function JobPost() {
     try {
       const res = await axios.post(`${API}/user/jobpost`, jobInfo);
       if (res.data) {
-<<<<<<< HEAD
         toast.success("Job post created successfully");
-=======
-        toast.success("Job post created successfully! Check your email!");
->>>>>>> 5cc42f323745e5990ee4a9bd6e8a425c4316d505
         document.getElementById("my_modal_3").close();
         setTimeout(() => {
           window.location.reload();
